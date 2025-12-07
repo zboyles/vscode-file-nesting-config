@@ -12,7 +12,7 @@
       "outFiles": [
         "${workspaceFolder}/extension/dist/**/*.js"
       ],
-      "preLaunchTask": "npm: ext:dev"
+      "preLaunchTask": "pnpm: ext:dev"
     }
   ]
 }

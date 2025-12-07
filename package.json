@@ -12,7 +12,7 @@
     "update": "node update.mjs",
     "lint": "eslint .",
     "release": "cd extension && bumpp",
-    "ext:build": "cd extension && tsdown src/index.ts --external vscode",
+    "ext:build": "cd extension && tsdown src/index.ts --external vscode && node -e \"require('fs').writeFileSync('dist/icon-theme.json', JSON.stringify({hidesExplorerArrows:true}))\"",
     "ext:dev": "nr ext:build --watch src",
     "ext:publish": "nr ext:build && cd extension && vsxpub --no-dependencies",
     "ext:pack": "nr ext:build && cd extension && vsce package --no-dependencies",

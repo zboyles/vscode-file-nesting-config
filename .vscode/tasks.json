@@ -4,21 +4,19 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "type": "npm",
-      "script": "ext:dev",
+      "label": "pnpm: ext:dev",
+      "type": "shell",
+      "command": "pnpm",
+      "args": [
+        "run",
+        "ext:dev"
+      ],
       "isBackground": true,
       "presentation": {
         "reveal": "never"
       },
       "problemMatcher": [
-        {
-          "base": "$ts-webpack-watch",
-          "background": {
-            "activeOnStart": true,
-            "beginsPattern": "Build start",
-            "endsPattern": "Build complete"
-          }
-        }
+        "$tsc-watch"
       ],
       "group": "build"
     }
