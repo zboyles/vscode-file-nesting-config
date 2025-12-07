@@ -15,7 +15,7 @@
   "categories": [
     "Other"
   ],
-  "main": "./dist/index.js",
+  "main": "./dist/index.mjs",
   "preview": true,
   "icon": "res/logo.png",
   "engines": {
@@ -30,6 +30,18 @@
         "command": "antfu.file-nesting.manualUpdate",
         "title": "Update config now",
         "category": "File Nesting Updater"
+      },
+      {
+        "command": "antfu.file-nesting.regenerateTheme",
+        "title": "Regenerate Icon Theme",
+        "category": "File Nesting Updater"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "antfu-file-nesting-icons",
+        "label": "File Nesting",
+        "path": "./dist/icon-theme.json"
       }
     ],
     "configuration": {
@@ -60,6 +72,11 @@
           "type": "string",
           "description": "The branch name of upstream repo",
           "default": "main"
+        },
+        "explorer.fileNesting.hideExplorerArrows": {
+          "type": "boolean",
+          "description": "Hides the arrow next to folders and nested files in the explorer. Requires activating the 'File Nesting' icon theme.",
+          "default": false
         }
       }
     }

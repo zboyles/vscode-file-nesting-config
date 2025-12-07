@@ -31,6 +31,23 @@ A config to make your file tree cleaner with the <a href="https://code.visualstu
 
 It will check for update every 12 hours by default. You can also do it manually by executing command `File Nesting Updater: Update config now`.
 
+## Hiding Explorer Arrows [WIP]
+
+This extension allows you to hide the expansion arrows in the File Explorer to further reduce clutter.
+
+To enable this:
+1. Go to Settings and enable `fileNestingUpdater.hideExplorerArrows`.
+2. The extension will generate a "File Nesting" icon theme that adapts your *current* icon theme but hides the arrows.
+3. You will be prompted to switch to this new theme.
+
+**Note**: Since VS Code controls arrow visibility via the Icon Theme, this feature creates a virtual theme that mimics your current one. If you change your icon theme later, you can regenerate the adapter by running the command `File Nesting Updater: Regenerate Icon Theme`.
+
+```json
+{
+  "fileNestingUpdater.hideExplorerArrows": true
+}
+```
+
 ## License
 
 MIT
